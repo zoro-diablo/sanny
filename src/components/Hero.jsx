@@ -18,12 +18,12 @@ const Hero = () => {
         <div className='mx-auto px-4 pb-20 pt-45 flex flex-col h-full sm:pb-16 sm:pt-32 md:pb-20 md:pt-40 lg:pb-20 lg:pt-45 xl:pb-24 xl:pt-48'>
           {/* Heading */}
           <div className=''>
-            <h1 className='text-[3.2rem] px-[8%] sm:px-[15%] font-bold leading-12 tracking-tight text-white gradient-text sm:text-5xl sm:leading-tight md:text-6xl md:leading-snug lg:text-[6rem] lg:leading-[5.8rem] xl:text-[7.6rem] xl:leading-28'>
-              <span>AI Services</span>
+            <h1 className='text-[2.6rem] px-[8%] sm:px-[15%] font-bold leading-12 tracking-tight text-white gradient-text sm:text-5xl sm:leading-tight md:text-6xl md:leading-snug lg:text-[6rem] lg:leading-[5.8rem] xl:text-[7.6rem] xl:leading-28'>
+              <span className='whitespace-nowrap'>AI Services</span>
               <br />
-              <span>for your Business</span>
+              <span className='whitespace-nowrap'>for your Business</span>
               <br />
-              <span>Growth</span>
+              <span className='whitespace-nowrap'>Growth</span>
             </h1>
           </div>
 
@@ -34,18 +34,18 @@ const Hero = () => {
           </p>
 
           {/* Buttons and Links */}
-          <div className='px-[8%] sm:px-[15%] mt-10 flex flex-col items-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-6 sm:mt-8 md:mt-9 lg:mt-10 xl:mt-12'>
+          <div className='px-[8%] sm:px-[15%] mt-10 flex flex-col items-start space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-6 sm:mt-8 md:mt-9 lg:mt-10 xl:mt-12'>
             {/* Button Container */}
             <div className='flex flex-row space-x-4 gap-2 sm:space-x-0'>
               <button className='bg-[#daeb20] text-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition-colors w-full sm:w-auto sm:py-2 sm:px-6 md:py-3 md:px-7 lg:py-3 lg:px-8 xl:py-4 xl:px-9'>
-                Subscribe now
+              Partner with AI Experts
               </button>
-              <Link
+              {/* <Link
                 to='/services'
                 className='text-gray-300 hover:bg-[#8d9294] hover:text-white font-semibold py-3 px-8 rounded-sm transition-colors w-full sm:w-auto sm:py-2 sm:px-6 md:py-3 md:px-7 lg:py-3 lg:px-8 xl:py-4 xl:px-9 text-center'
               >
                 Our services
-              </Link>
+              </Link> */}
             </div>
             {/* Divider */}
             <div className='w-full h-px bg-gray-400 sm:w-px sm:h-16'></div>

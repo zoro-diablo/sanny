@@ -5,7 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import gsap from 'gsap';
 
 const phrase =
-  'Enhance your workflows to maximize performance and take effective control of your time. Focus on what truly matters to your business, while routine tasks run on autopilot with the help of our no-code and code-based solutions.';
+  'Genfox.AI delivers cutting-edge AI solutions designed for enterprises that don’t settle. From intelligent automation to custom-built AI systems, we help you scale faster, operate smarter, and stay ahead of the competition. Trusted by industry leaders, we turn AI potential into real-world results—seamlessly, securely, and at scale.';
 
 export default function Toad() {
   let refs = useRef([]);

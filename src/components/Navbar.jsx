@@ -42,7 +42,8 @@ export default function Navbar() {
             to="/"
             className="text-white font-bold text-2xl flex items-center ml-1 special-font"
           >
-            Sanny®
+            <img src="/genfox.png" className='h-8 mr-1' alt="genfoxlogo" />
+            Genfox
             <span className="text-sm ml-1"></span>
           </Link>
         </div>
@@ -55,12 +56,12 @@ export default function Navbar() {
           >
             Services
           </Link>
-          <Link
+          {/* <Link
             to="/pricing"
             className="text-white hover:text-gray-300 font-semibold py-3 px-3 rounded-full transition-colors"
           >
             Pricing
-          </Link>
+          </Link> */}
           <Link
             to="/case-studies"
             className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors"
@@ -149,13 +150,13 @@ export default function Navbar() {
               >
                 Services
               </Link>
-              <Link
+              {/* <Link
                 to="/pricing"
                 className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
                 onClick={() => setIsOpen(false)}
               >
                 Pricing
-              </Link>
+              </Link> */}
               <Link
                 to="/case-studies"
                 className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
