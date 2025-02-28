@@ -7,6 +7,8 @@ const Home = () => {
     <div className=''>
       <Hero />
       <Toad />
+      <Hero />
+      <Hero />
     </div>
   );
 };
