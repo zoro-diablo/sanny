@@ -1,30 +1,19 @@
 import React from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ServiceCard = ({ number, title, description }) => (
-  <div className="text-white p-6 rounded-lg shadow-md">
-    <div className="text-lg font-light mb-4 text-white/80 border w-fit px-2 rounded-full">{number}</div>
+  <div className=" text-white p-6 rounded-lg shadow-md">
+    <div className="text-lg font-light mb-4 text-white/80 border w-fit  px-2 rounded-full">{number}</div>
     <h3 className="text-xl font-semibold mb-4">{title}</h3>
     <p className="text-gray-300">{description}</p>
   </div>
 );
 
 const Services = () => {
-  const { scrollY } = useScroll();
-  
-  const rotate = useTransform(scrollY, [0, 1000], [0, 180]);
-  
- 
-  const y = useTransform(scrollY, 
-    [0, document.documentElement.scrollHeight - window.innerHeight], 
-    [0, window.innerHeight * 0.9]  
-  );
-
   return (
-    <section className="text-white py-[15%] px-4 relative min-h-screen">
+    <section className=" text-white py-[15%] px-4">
       <div className="max-w-5xl mx-auto">
         <h2 className="text-3xl font-semibold mb-10 text-left ml-6">Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ">
           <ServiceCard 
             number="1" 
             title="Business process automation" 
@@ -57,18 +46,6 @@ const Services = () => {
           />
         </div>
       </div>
-      
-      {/* Animated Search Icon */}
-      <motion.img
-        src="/search.png"
-        alt="Search Icon"
-        className="absolute right-10 w-12 h-12"
-        style={{
-          rotate: rotate,
-          y: y,
-          top: '10px',  
-        }}
-      />
     </section>
   );
 };
