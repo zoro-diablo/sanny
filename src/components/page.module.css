@@ -4,7 +4,7 @@
   align-items: flex-end;   
   padding: 0 5%;   
   margin-left: 15%;   
-  margin-bottom: 100vh;   
+  margin-bottom: 80vh;   
   color: rgb(255, 255, 255); 
 }
 
@@ -33,7 +33,7 @@
     align-items: center;     
     padding: 0 3%;     
     margin-left: 5%;     
-    margin-bottom: 50vh;   
+    margin-bottom: 20vh;   
   }    
 
   .body {     

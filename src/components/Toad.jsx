@@ -23,7 +23,7 @@ export default function Toad() {
         trigger: container.current,
         scrub: true,
         start: `top`,
-        end: `+=${window.innerHeight / 1}`,
+        end: `+=${window.innerHeight / 1.5}`,
       },
       opacity: 1,
       ease: 'none',
