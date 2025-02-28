@@ -4,6 +4,7 @@ import Toad from '../components/Toad';
 import Features from '../components/Features';
 import Services from '../components/Services';
 import SuccessStories from '../components/SuccessStories';
+import TeamSection from '../components/TeamSection';
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
       <Features />
       <Services />
       <SuccessStories />
+      <TeamSection />
       {/* <Services />
       <Services /> */}
     </div>
