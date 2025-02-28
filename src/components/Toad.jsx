@@ -16,16 +16,13 @@ export default function Toad() {
     gsap.registerPlugin(ScrollTrigger);
     createAnimation();
 
-    // Refresh ScrollTrigger on resize for responsiveness
     window.addEventListener('resize', () => ScrollTrigger.refresh());
     return () => window.removeEventListener('resize', () => ScrollTrigger.refresh());
   }, []);
 
   const createAnimation = () => {
-    // Set initial opacity to match CSS
     gsap.set(refs.current, { opacity: 0.2 });
 
-    // Dynamic end value for responsiveness
     const getEndValue = () => {
       const vh = window.innerHeight;
       return window.innerWidth <= 768 ? `+=${vh / 3}` : `+=${vh / 2}`;
