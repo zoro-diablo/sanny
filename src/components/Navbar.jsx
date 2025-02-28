@@ -84,7 +84,7 @@ export default function Navbar() {
             to="/buy"
             className="bg-white pr-4 text-black font-semibold py-3 px-3 rounded-full hover:bg-gray-200 transition-colors"
           >
-            Buy now
+            Call Now
           </Link>
         </div>
 
@@ -113,7 +113,7 @@ export default function Navbar() {
             to="/buy"
             className="bg-white text-black font-semibold py-3 px-4 rounded-full hover:bg-gray-200 transition-colors"
           >
-            Buy now
+            Call Now
           </Link>
         </div>
 
