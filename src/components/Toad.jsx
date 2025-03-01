@@ -33,7 +33,7 @@ export default function Toad() {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
-        start: 'top top',
+        start: 'top 80%',
         end: getEndValue(),
       },
       opacity: 1,
