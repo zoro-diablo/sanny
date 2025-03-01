@@ -3,7 +3,7 @@ import HowItWorks from '../components/HowItWorks';
 import Toad from '../components/Toad';
 import Features from '../components/Features';
 import Services from '../components/Services';
-import SuccessStories from '../components/SuccessStories';
+import  SwipeCarousel  from '../components/SwipeCarousel';
 import TeamSection from '../components/TeamSection';
 import Footer from '../components/Footer';
 import CallToAction from '../components/CallToAction';
@@ -19,7 +19,7 @@ const Home = () => {
       <section id="features"><Features /></section>
       <section id="services"><Services /></section>
       <section id="scroll-section"><ScrollSection /></section>
-      <section id="success-stories"><SuccessStories /></section>
+      <section id="success-stories"><SwipeCarousel /></section>
       <section id="team"><TeamSection /></section>
       <section id="faq"><FAQ /></section>
       <section id="call-to-action"><CallToAction /></section>

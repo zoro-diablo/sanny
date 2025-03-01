@@ -28,9 +28,8 @@ const Hero = () => {
           </div>
 
           {/* Subtext */}
-          <p className='mt-6 text-md text-gray-300 max-w-4xl px-2 sm:px-[15%] sm:mt-4 sm:text-base md:mt-5 md:text-lg lg:mt-6 lg:text-lg xl:mt-6 xl:text-xl'>
-            We’ll pump your company with AI. As a leading AI automation agency
-            with 99 years of experience, we deliver top results.
+          <p className='mt-6 text-md text-gray-300 max-w-5xl px-2 sm:px-[15%] sm:mt-4 sm:text-base md:mt-5 md:text-lg lg:mt-6 lg:text-lg xl:mt-6 xl:text-xl'>
+          From automation to AI strategy, we help enterprises unlock AI’s full potential. Boost efficiency, innovation, and competitive edge
           </p>
 
           {/* Buttons and Links */}

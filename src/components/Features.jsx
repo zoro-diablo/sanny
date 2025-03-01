@@ -7,7 +7,7 @@ const Features = () => {
         <div className="text-left sm:text-left text-center flex-1 min-w-[200px] sm:min-w-[180px] md:min-w-[200px]">
           <span className="block mb-2 sm:mb-2 md:mb-2 mx-auto sm:mx-0 w-fit">
             <img 
-              src="https://img.icons8.com/?size=100&id=4FIAGySoSla4&format=png&color=FFFFFF" 
+              src="https://img.icons8.com/?size=80&id=4FIAGySoSla4&format=png&color=BEBEBE" 
               alt="time" 
             />
           </span>
@@ -18,18 +18,18 @@ const Features = () => {
         <div className="text-left sm:text-left text-center flex-1 min-w-[200px] sm:min-w-[180px] md:min-w-[200px]">
           <span className="text-2xl block mb-2 sm:mb-2 md:mb-2 mx-auto sm:mx-0 w-fit">
             <img 
-              src="https://img.icons8.com/?size=100&id=vPkulGr9ykhD&format=png&color=FFFFFF" 
+              src="https://img.icons8.com/?size=80&id=vPkulGr9ykhD&format=png&color=BEBEBE" 
               alt="fast" 
             />
           </span>
-          <p className="flex-start text-lg px-10 sm:px-0  sm:text-base md:text-lg text-white/80 font-light flex w-full float-left sm:text-left text-center">
+          <p className="flex-start text-lg px-10 sm:px-0  sm:text-base md:text-lg text-white/80 font-light flex w-full float-left sm:text-left text-center mt-1">
             Updates weekly after agreeing on tasks
           </p>
         </div>
         <div className="text-left sm:text-left text-center flex-1 min-w-[200px] sm:min-w-[180px] md:min-w-[200px]">
           <span className="text-2xl block mb-6 sm:mb-4 md:mb-6 mx-auto sm:mx-0 w-fit">
             <img 
-              src="https://img.icons8.com/?size=80&id=676&format=png&color=FFFFFF" 
+              src="https://img.icons8.com/?size=60&id=676&format=png&color=BEBEBE" 
               alt="smile" 
             />
           </span>
@@ -37,14 +37,15 @@ const Features = () => {
             Revisions to your full satisfaction
           </p>
         </div>
-        <div className="text-left  sm:text-left text-center flex-1 min-w-[200px] sm:min-w-[180px] md:min-w-[200px]">
+        <div className="text-center flex-1 min-w-[200px] sm:min-w-[180px] md:min-w-[200px]">
           <span className="text-2xl block mb-2 sm:mb-2 md:mb-2 mx-auto sm:mx-0 w-fit">
             <img 
-              src="https://img.icons8.com/?size=80&id=3685&format=png&color=FFFFFF" 
-              alt="globe" 
+              src="https://img.icons8.com/?size=60&id=3685&format=png&color=BEBEBE" 
+              alt="globe"
+              
             />
           </span>
-          <p className="flex-start px-10 sm:px-0 text-lg sm:text-base md:text-lg text-white/80 font-light flex w-full float-left sm:text-left text-center">
+          <p className="flex-start px-10 sm:px-0 text-lg sm:text-base md:text-lg text-white/80 font-light flex w-full float-left sm:text-left text-center mt-3">
             AI solutions that drive measurable impact
           </p>
         </div>

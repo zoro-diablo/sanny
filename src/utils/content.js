@@ -18,43 +18,39 @@ export const cards = [
 
 export const faqs = [
   {
-    question: 'How does the monthly subscription model work?',
+    question: 'How does Genfox.AI integrate AI into enterprise ecosystems?',
     answer:
-      'Our monthly subscription provides access to our AI automation tools and support. You can choose from different tiers based on your business needs, with flexible billing cycles and the ability to scale as your requirements grow.',
+      'We design AI solutions that seamlessly integrate with cloud infrastructures (Azure, AWS, Google Cloud), enterprise databases, APIs, and legacy systems—ensuring scalability, security, and compliance at every level.',
   },
   {
-    question: 'How does the 100% money-back guarantee work?',
+    question: 'Does Genfox.AI build custom AI models or fine-tune existing ones?',
     answer:
-      "If you're not satisfied with our services within the first 30 days, we'll refund your payment in full, no questions asked. This applies to our initial consultation and first month of service.",
+      'Yes, we develop custom AI models, optimize large language models (LLMs), and fine-tune enterprise-specific AI systems for improved performance, accuracy, and cost efficiency.',
   },
   {
-    question:
-      'What is business process automation, and how can it benefit my company?',
+    question: 'How does Genfox.AI ensure AI solutions align with our business goals?',
     answer:
-      'Business process automation uses AI to streamline repetitive tasks, improve efficiency, and reduce errors. It can save your company time and money while allowing your team to focus on strategic initiatives.',
+      'We take a strategy-first approach, aligning AI implementation with your business objectives, industry challenges, and operational needs. Our AI architectures are designed for scalability, compliance, and cost efficiency, ensuring that every AI investment delivers optimized performance while minimizing operational expenses.',
   },
   {
-    question:
-      "How does genfox AI integrate AI into my company's existing data systems?",
+    question: 'Can Genfox.AI enhance and optimize existing AI models?',
     answer:
-      'We offer custom integration services, connecting our AI solutions with your current systems through APIs and custom development, ensuring seamless data flow and minimal disruption to your operations.',
+      'Absolutely. We conduct performance tuning, latency reduction, inference optimization, and model retraining to ensure AI models operate at peak efficiency while reducing computational costs.',
   },
   {
-    question: 'Can genfox AI develop custom AI-powered apps for my business?',
+    question: 'Does Genfox.AI support multi-agent AI systems?',
     answer:
-      'Yes, we specialize in creating tailored AI-powered applications designed specifically for your business needs, from concept to deployment and ongoing support.',
+      'Yes. We develop multi-agent AI frameworks that enable collaborative, autonomous decision-making across various AI agents. This enhances workflow automation, complex problem-solving, and decentralized AI coordination for enterprise applications.',
   },
   {
-    question:
-      'Do you offer consultations to identify the best AI solutions for my business?',
+    question: 'How does Genfox.AI implement real-time AI and autonomous agents?',
     answer:
-      'Absolutely, we provide free initial consultations to assess your needs and recommend the most effective AI solutions for your specific business challenges.',
+      'We build self-learning AI agents, real-time inference systems, and autonomous decision-making frameworks that optimize workflows, enhance predictive analytics, and improve operational efficiency.',
   },
   {
-    question:
-      'What kind of ongoing support does genfox AI provide after project delivery?',
+    question: 'How can enterprises collaborate with Genfox.AI for AI transformation?',
     answer:
-      'We offer comprehensive support including regular updates, technical assistance, and performance optimization to ensure your AI solutions continue to deliver value long-term.',
+      'We offer AI strategy consulting, long-term innovation partnerships, and enterprise-wide AI transformation solutions to help businesses leverage AI for efficiency, scalability, and competitive advantage.',
   },
 ];
 

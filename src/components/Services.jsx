@@ -14,7 +14,7 @@ const ServiceCard = ({ number, title, description, imageSrc }) => (
       <h3 className="text-xl font-semibold mb-4">{title}</h3>
       <p className="text-gray-300 mb-4">{description}</p>
     </div>
-    <div className="w-full h-[200px] overflow-hidden rounded-b-2xl">
+    <div className="w-full h-[230px] overflow-hidden rounded-2xl">
       <img src={imageSrc} alt={title} className="w-full h-full object-cover" />
     </div>
   </div>

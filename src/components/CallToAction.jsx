@@ -8,9 +8,16 @@ const CallToAction = () => {
 
   const SpringModal = ({ isOpen, setIsOpen }) => {
     const [formData, setFormData] = useState({
-      firstname: '',
+      fullName: '',
       email: '',
-      contactno: '',
+      role: '',
+      companyName: '',
+      companyWebsite: '',
+      companySize: '',
+      annualRevenue: '',
+      projectBudget: '',
+      services: '',
+      description: ''
     });
     const [status, setStatus] = useState(null);
 
@@ -26,26 +33,48 @@ const CallToAction = () => {
       e.preventDefault();
 
       const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      const phonePattern = /^\+?[0-9]{7,15}$/;
 
+      if (!formData.fullName) {
+        setStatus('Please enter your full name');
+        return;
+      }
       if (!formData.email || !emailPattern.test(formData.email)) {
         setStatus('Invalid email address');
         return;
       }
-      if (!formData.contactno || !phonePattern.test(formData.contactno)) {
-        setStatus('Invalid phone number');
+      if (!formData.companyName) {
+        setStatus('Please enter your company name');
+        return;
+      }
+      if (!formData.companySize) {
+        setStatus('Please select company size');
+        return;
+      }
+      if (!formData.projectBudget) {
+        setStatus('Please select project budget');
+        return;
+      }
+      if (!formData.description) {
+        setStatus('Please provide a description');
         return;
       }
 
       setStatus('Submitting...');
 
       const googleFormEndpoint =
-        'https://docs.google.com/forms/d/e/1FAIpQLSdVxXUIc7aEOUfpC4IUdXAp3lxziCS13RPsFj3z9QJfeDOXBg/formResponse';
+        'https://docs.google.com/forms/d/e/1FAIpQLSf6wixNhxnl4103Od7drKF2rPc-fLvb-quW8tp109Q2qmM9LA/formResponse';
 
       const body = new URLSearchParams();
-      body.append('entry.538181747', formData.firstname);
-      body.append('entry.910439913', formData.email);
-      body.append('entry.25111992', formData.contactno);
+      body.append('entry.1395028843', formData.fullName);
+      body.append('entry.1818829057', formData.email);
+      body.append('entry.1445224656', formData.role);
+      body.append('entry.884011484', formData.companyName);
+      body.append('entry.836075675', formData.companyWebsite);
+      body.append('entry.377500078', formData.companySize);
+      body.append('entry.1458042920', formData.annualRevenue);
+      body.append('entry.1736938662', formData.projectBudget);
+      body.append('entry.1320618773', formData.services);
+      body.append('entry.1084696328', formData.description);
 
       try {
         await fetch(googleFormEndpoint, {
@@ -57,7 +86,18 @@ const CallToAction = () => {
           body,
         });
         setStatus('Success! Your response has been submitted.');
-        setFormData({ firstname: '', email: '', contactno: '' });
+        setFormData({
+          fullName: '',
+          email: '',
+          role: '',
+          companyName: '',
+          companyWebsite: '',
+          companySize: '',
+          annualRevenue: '',
+          projectBudget: '',
+          services: '',
+          description: ''
+        });
         setTimeout(() => {
           setIsOpen(false);
           setStatus(null);
@@ -87,57 +127,188 @@ const CallToAction = () => {
               <FiAlertCircle className="text-white/30 rotate-12 text-[250px] absolute z-0 -top-24 -left-24" />
               <div className="relative z-10">
                 <div className="bg-white w-16 h-16 mb-2 rounded-full text-3xl text-black grid place-items-center mx-auto">
-                 <IoMdContact />
-
+                  <IoMdContact />
                 </div>
                 <h3 className="text-3xl font-bold text-center mb-2 text-black">
-                  Contact Us
+                  Genfox.AI Support
                 </h3>
                 <p className="text-center mb-6 text-black/50">
-                  We’d love to hear from you! Please fill out the form below.
+                  Please fill out the form below to contact us.
                 </p>
                 
                 <form onSubmit={handleSubmit}>
-                  <div className="mb-4">
-                    <label htmlFor="firstname" className="block text-sm font-medium mb-1 text-black">
-                      Name
-                    </label>
-                    <input
-                      id="firstname"
-                      placeholder="John"
-                      type="text"
-                      value={formData.firstname}
-                      onChange={handleChange}
-                      required
-                      className="w-full p-2 rounded  text-black focus:ring-white focus:border-white focus:outline-white"
-                    />
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label htmlFor="fullName" className="block text-sm font-medium mb-1 text-black">
+                        What is your name? *
+                      </label>
+                      <input
+                        id="fullName"
+                        placeholder="John Doe"
+                        type="text"
+                        value={formData.fullName}
+                        onChange={handleChange}
+                        required
+                        className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium mb-1 text-black">
+                        What is your email? *
+                      </label>
+                      <input
+                        id="email"
+                        placeholder="john@company.com"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      />
+                    </div>
                   </div>
+
                   <div className="mb-4">
-                    <label htmlFor="email" className="block text-sm font-medium mb-1 text-black">
-                      Email Address
+                    <label htmlFor="role" className="block text-sm font-medium mb-1 text-black">
+                      What is your role within your organization?
                     </label>
-                    <input
-                      id="email"
-                      placeholder="example@domain.com"
-                      type="email"
-                      value={formData.email}
+                    <select
+                      id="role"
+                      value={formData.role}
+                      onChange={handleChange}
+                      className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                    >
+                      <option value="">Select role</option>
+                      <option value="CEO">CEO</option>
+                      <option value="CTO">CTO</option>
+                      <option value="AI Lead">AI Lead</option>
+                      <option value="Other">Other</option>
+                    </select>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label htmlFor="companyName" className="block text-sm font-medium mb-1 text-black">
+                        Company name? *
+                      </label>
+                      <input
+                        id="companyName"
+                        placeholder="Your Company"
+                        type="text"
+                        value={formData.companyName}
+                        onChange={handleChange}
+                        required
+                        className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="companyWebsite" className="block text-sm font-medium mb-1 text-black">
+                        Company website?
+                      </label>
+                      <input
+                        id="companyWebsite"
+                        placeholder="https://yourwebsite.com"
+                        type="url"
+                        value={formData.companyWebsite}
+                        onChange={handleChange}
+                        className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      />
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-2 gap-4 mb-4">
+                    <div>
+                      <label htmlFor="companySize" className="block text-sm font-medium mb-1 text-black">
+                        Company size? *
+                      </label>
+                      <select
+                        id="companySize"
+                        value={formData.companySize}
+                        onChange={handleChange}
+                        required
+                        className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      >
+                        <option value="">Select company size</option>
+                        <option value="20 - 50 people">20 - 50 people</option>
+                        <option value="Startup (Less than 20 employees)">Startup (Less than 20 employees)</option>
+                        <option value="Small Business (20-100 employees)">Small Business (20-100 employees)</option>
+                        <option value="Mid-Sized Company (100-500 employees)">Mid-Sized Company (100-500 employees)</option>
+                        <option value="Enterprise (500+ employees)">Enterprise (500+ employees)</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="annualRevenue" className="block text-sm font-medium mb-1 text-black">
+                        Company’s annual revenue?
+                      </label>
+                      <select
+                        id="annualRevenue"
+                        value={formData.annualRevenue}
+                        onChange={handleChange}
+                        className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      >
+                        <option value="">Select revenue range</option>
+                        <option value="$500K - $2M/month">$500K - $2M/month</option>
+                        <option value="Less than $1M">Less than $1M</option>
+                        <option value="$1M - $10M">$1M - $10M</option>
+                        <option value="$10M - $100M">$10M - $100M</option>
+                        <option value="$100M+">$100M+</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="projectBudget" className="block text-sm font-medium mb-1 text-black">
+                      Project budget? *
+                    </label>
+                    <select
+                      id="projectBudget"
+                      value={formData.projectBudget}
                       onChange={handleChange}
                       required
                       className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
-                    />
+                    >
+                      <option value="">Select budget range</option>
+                      <option value="$20,000 - $50,000">$20,000 - $50,000</option>
+                      <option value="$5K - $20K">$5K - $20K</option>
+                      <option value="$20K - $50K">$20K - $50K</option>
+                      <option value="$50K - $100K">$50K - $100K</option>
+                      <option value="$100K+">$100K+</option>
+                    </select>
                   </div>
+
                   <div className="mb-4">
-                    <label htmlFor="contactno" className="block text-sm font-medium mb-1 text-black">
-                      Contact Number
+                    <label htmlFor="services" className="block text-sm font-medium mb-1 text-black">
+                      What services are you interested in?
                     </label>
-                    <input
-                      id="contactno"
-                      placeholder="+1234567890"
-                      type="text"
-                      value={formData.contactno}
+                    <select
+                      id="services"
+                      value={formData.services}
+                      onChange={handleChange}
+                      className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                    >
+                      <option value="">Select services</option>
+                      <option value="Developing a custom AI solution">Developing a custom AI solution</option>
+                      <option value="AI Strategy & Consulting">AI Strategy & Consulting</option>
+                      <option value="Enterprise AI Optimization">Enterprise AI Optimization</option>
+                      <option value="Multi-Agent AI Development">Multi-Agent AI Development</option>
+                      <option value="Autonomous AI Systems">Autonomous AI Systems</option>
+                      <option value="LLM Fine-Tuning & Custom AI Models">LLM Fine-Tuning & Custom AI Models</option>
+                      <option value="AI-Powered Automation">AI-Powered Automation</option>
+                    </select>
+                  </div>
+
+                  <div className="mb-4">
+                    <label htmlFor="description" className="block text-sm font-medium mb-1 text-black">
+                      How can we help? *
+                    </label>
+                    <textarea
+                      id="description"
+                      placeholder="Type your response here..."
+                      value={formData.description}
                       onChange={handleChange}
                       required
                       className="w-full p-2 rounded text-black focus:ring-white focus:border-white focus:outline-white"
+                      rows="4"
                     />
                   </div>
 
@@ -172,7 +343,7 @@ const CallToAction = () => {
   };
 
   return (
-    <section className="bg-black text-white py-[20%] sm:py-[6%] md:py-[8%]">
+    <section className=" text-white py-[20%] sm:py-[6%] md:py-[8%]">
       <div className="px-[12%] sm:px-[8%] md:px-[12%] lg:px-[16%] flex flex-col">
         <div className="mb-4 sm:mb-6 md:mb-8">
           <h2 className="text-2xl sm:text-2xl md:text-3xl font-medium mb-2 sm:mb-3 md:mb-4 text-left">
