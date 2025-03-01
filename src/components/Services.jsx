@@ -1,50 +1,178 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
+import { services } from '../utils/content';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ServiceCard = ({ number, title, description, imageSrc }) => (
-  <div className='bg-[#19181b] text-white p-6 rounded-3xl shadow-md flex flex-col transform hover:scale-[1.02] transition-transform duration-300'>
-    <div className='flex-1'>
-      <div className='text-lg font-light mb-4 text-white/80 border w-fit px-2 rounded-full'>
+  <div className="bg-[#19181b] text-white p-6 rounded-3xl shadow-md flex flex-col transform hover:scale-[1.02] transition-transform duration-300">
+    <div className="flex-1">
+      <div className="text-lg font-light mb-4 text-white/80 border w-fit px-2 rounded-full">
         {number}
       </div>
-      <h3 className='text-xl font-semibold mb-4'>{title}</h3>
-      <p className='text-gray-300 mb-4'>{description}</p>
+      <h3 className="text-xl font-semibold mb-4">{title}</h3>
+      <p className="text-gray-300 mb-4">{description}</p>
     </div>
-    <div className='w-full h-[200px] overflow-hidden rounded-b-2xl'>
-      <img
-        src={imageSrc}
-        alt={title}
-        className='w-full h-full object-cover'
-      />
+    <div className="w-full h-[200px] overflow-hidden rounded-b-2xl">
+      <img src={imageSrc} alt={title} className="w-full h-full object-cover" />
     </div>
   </div>
 );
 
 const Services = () => {
+  const icon1Ref = useRef(null);
+  const icon2Ref = useRef(null);
+  const icon3Ref = useRef(null);
+  const icon4Ref = useRef(null);
+  const icon5Ref = useRef(null);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    // Icon 1 (acrobat.png)
+    gsap.set(icon1Ref.current, {
+      width: 80,
+      height: 80,
+      position: 'absolute',
+      top: '7%',
+      left: '15%',
+      zIndex: 0
+    });
+    gsap.to(icon1Ref.current, {
+      y: 200,
+      x: -150,
+      rotation: 180,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: 1
+      },
+      ease: 'none',
+      duration: 2
+    });
+
+    // Icon 2 (adobe-photoshop.png)
+    gsap.set(icon2Ref.current, {
+      width: 75,
+      height: 75,
+      position: 'absolute',
+      top: '0%',
+      left: '25%',
+      zIndex: 0
+    });
+    gsap.to(icon2Ref.current, {
+      y: 250,
+      x: 100,
+      rotation: 270,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 70%',
+        end: 'bottom 30%',
+        scrub: 1.3
+      },
+      ease: 'none',
+      duration: 2.8
+    });
+
+    // Icon 3 (itunes.png)
+    gsap.set(icon3Ref.current, {
+      width: 80,
+      height: 80,
+      position: 'absolute',
+      top: '9%',
+      left: '45%',
+      zIndex: 0
+    });
+    gsap.to(icon3Ref.current, {
+      y: 300,
+      x: -200,
+      rotation: 360,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 60%',
+        end: 'bottom 40%',
+        scrub: 1.6
+      },
+      ease: 'none',
+      duration: 3.6
+    });
+
+    // Icon 4 (after-effects.png)
+    gsap.set(icon4Ref.current, {
+      width: 90,
+      height: 90,
+      position: 'absolute',
+      top: '8%',
+      left: '65%',
+      zIndex: 0
+    });
+    gsap.to(icon4Ref.current, {
+      y: 350,
+      x: 150,
+      rotation: 450,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 40%',
+        end: 'bottom 50%',
+        scrub: 1.9
+      },
+      ease: 'none',
+      duration: 4.4
+    });
+
+    // Icon 5 (twitter.png)
+    gsap.set(icon5Ref.current, {
+      width: 70,
+      height: 70,
+      position: 'absolute',
+      top: '2%',
+      left: '85%',
+      zIndex: 0
+    });
+    gsap.to(icon5Ref.current, {
+      y: 400,
+      x: -100,
+      rotation: 540,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 60%',
+        end: 'bottom 60%',
+        scrub: 2.2
+      },
+      ease: 'none',
+      duration: 5.2
+    });
+
+    // Cleanup
+    return () => {
+      ScrollTrigger.getAll().forEach(t => t.kill());
+    };
+  }, []);
+
   return (
-    <section className='text-white py-[8%] px-4'>
-      <div className='max-w-5xl mx-auto'>
-        <h2 className='text-3xl font-semibold mb-10 text-left ml-6'>
+    <section ref={sectionRef} className="text-white py-[8%] px-4 relative overflow-hidden">
+      {/* Floating Icons */}
+      <img ref={icon1Ref} src="/acrobat.png" alt="Acrobat icon" className="absolute hidden sm:block" />
+      <img ref={icon2Ref} src="/adobe-photoshop.png" alt="Photoshop icon" className="absolute hidden sm:block" />
+      <img ref={icon3Ref} src="/itunes.png" alt="iTunes icon" className="absolute hidden sm:block" />
+      <img ref={icon4Ref} src="/after-effects.png" alt="After Effects icon" className="absolute hidden sm:block" />
+      <img ref={icon5Ref} src="/twitter.png" alt="Twitter icon" className="absolute hidden sm:block" />
+
+      <div className="max-w-5xl mx-auto relative z-10">
+        <h2 className="text-3xl font-semibold mb-10 text-left ml-6">
           We are suitable for in place of Services
         </h2>
-        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
-          <ServiceCard
-            number='1'
-            title='Enterprise Leaders'
-            description='We architect and optimize AI ecosystems for global enterprises, ensuring seamless automation, operational efficiency, and data-driven decision-making at scale. Our solutions enhance productivity, minimize risk, and drive measurable business impact.'
-            imageSrc='https://images.unsplash.com/photo-1717501219905-2711c58ab655?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFpfGVufDB8fDB8fHwy'
-          />
-          <ServiceCard
-            number='2'
-            title='Scaling AI Products'
-            description='For companies looking to refine and scale their AI-driven products, we deliver advanced model optimization, seamless integrations, and performance enhancements that unlock new levels of efficiency and user engagement.'
-            imageSrc='https://images.unsplash.com/photo-1696258686454-60082b2c33e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWl8ZW58MHx8MHx8fDI%3D'
-          />
-          <ServiceCard
-            number='3'
-            title='AI-First Innovators'
-            description='From concept to deployment, we help visionary leaders build transformative AI solutions. Our expertise in AI strategy, infrastructure, and execution ensures a competitive edge in a rapidly evolving landscape.'
-            imageSrc='https://images.unsplash.com/photo-1711831521065-e546a5aca68e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFpfGVufDB8fDB8fHwy'
-          />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {services.map((card, index) => (
+            <ServiceCard
+              key={index}
+              number={card.number}
+              title={card.title}
+              description={card.description}
+              imageSrc={card.imageSrc}
+            />
+          ))}
         </div>
       </div>
     </section>
