@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 const Hero = () => {
   return (
     <div className='relative m-[2%] rounded-4xl'>
-      {/* Layered Backgrounds (stacked behind, visible at the bottom) */}
+      {/* Layered Backgrounds */}
       <div className='absolute inset-0 z-0 flex justify-center'>
-        {/* First background layer (farthest back) */}
+        {/* First background layer */}
         {/* <div className='absolute bottom-0 left-0 w-full h-[40%] bg-gray-700 opacity-30 rounded-b-4xl transform translate-y-4'></div> */}
         {/* Second background layer */}
         <div className='absolute bottom-0  w-[98%]  h-[55%] bg-gray-200 opacity-50 rounded-b-4xl transform translate-y-2'></div>
@@ -37,8 +37,8 @@ const Hero = () => {
           <div className='px-[8%] sm:px-[15%] mt-10 flex flex-col items-start space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-6 sm:mt-8 md:mt-9 lg:mt-10 xl:mt-12'>
             {/* Button Container */}
             <div className='flex flex-row space-x-4 gap-2 sm:space-x-0'>
-              <button className='bg-[#daeb20] text-black font-semibold py-3 px-8 rounded-lg hover:bg-yellow-500 transition-colors w-full sm:w-auto sm:py-2 sm:px-6 md:py-3 md:px-7 lg:py-3 lg:px-8 xl:py-4 xl:px-9'>
-              Partner with AI Experts
+              <button className='bg-[#daeb20] text-black font-semibold py-3 px-8 rounded-lg cursor-pointer hover:scale-105 transition-colors w-full sm:w-auto sm:py-2 sm:px-6 md:py-3 md:px-7 lg:py-3 lg:px-8 xl:py-4 xl:px-9'>
+                Partner with AI Experts
               </button>
               {/* <Link
                 to='/services'

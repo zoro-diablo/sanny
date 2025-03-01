@@ -1,26 +1,7 @@
 import React from 'react';
-
+import {teamMembers} from '../utils/content'
 const TeamSection = () => {
-  const teamMembers = [
-    {
-      id: 1,
-      name: 'Rich Purnell',
-      title: 'CEO',
-      image: 'https://images.unsplash.com/photo-1579038773867-044c48829161?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NTB8fGNlbyUyMG1hbGV8ZW58MHx8MHx8fDI%3D',
-    },
-    {
-      id: 2,
-      name: 'Beth Johanssen',
-      title: 'CTO',
-      image: 'https://images.unsplash.com/photo-1664575602554-2087b04935a5?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y2VvfGVufDB8fDB8fHwy',
-    },
-    {
-      id: 3,
-      name: 'Chris Beck',
-      title: 'Head of Data Engineering',
-      image: 'https://images.unsplash.com/photo-1562788869-4ed32648eb72?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fGNlb3xlbnwwfHwwfHx8Mg%3D%3D',
-    },
-  ];
+
 
   return (
     <section className='py-20'>

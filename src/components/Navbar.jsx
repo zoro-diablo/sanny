@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
+import { Link, animateScroll as scroll } from 'react-scroll'; 
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,6 +27,10 @@ export default function Navbar() {
     scrolled: { paddingTop: '0.75rem', paddingBottom: '0.75rem' },
   };
 
+  const scrollToTop = () => {
+    scroll.scrollToTop({ duration: 800, smooth: 'easeInOutQuart' });
+  };
+
   return (
     <motion.nav
       className="fixed top-0 left-0 w-full z-50"
@@ -35,57 +39,59 @@ export default function Navbar() {
       variants={navbarVariants}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
-      <div className="max-w-[1500px] mx-auto flex items-center justify-between h-16 px-[8%] sm:px-[15%]">
+      <div className="max-w-[1500px] mx-auto flex items-center justify-between h-16 px-[8%] sm:px-[15%] ">
         {/* Logo Section */}
-        <div className="flex items-center bg-[#343736]/64 backdrop-blur-md rounded-full py-3 px-4">
-          <Link
-            to="/"
-            className="text-white font-bold text-2xl flex items-center ml-1 special-font"
+        <div className="flex items-center bg-[#343736]/64 backdrop-blur-md rounded-full py-3 px-4 ">
+          <button
+            onClick={scrollToTop}
+            className="text-white font-bold text-2xl flex items-center ml-1 special-font cursor-pointer"
           >
-            <img src="/genfox.png" className='h-8 mr-1' alt="genfoxlogo" />
+            <img src="/genfox.png" className="h-8 mr-1 cursor-pointer" alt="genfoxlogo" />
             Genfox
             <span className="text-sm ml-1"></span>
-          </Link>
+          </button>
         </div>
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center space-x-6 bg-[#343736]/64 backdrop-blur-md rounded-full p-1">
           <Link
-            to="/services"
-            className="text-white hover:text-gray-300 font-semibold py-3 ml-4 px-3 rounded-full transition-colors"
+            to="services"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-gray-300 font-semibold py-3 ml-4 px-3 rounded-full transition-colors cursor-pointer"
           >
             Services
           </Link>
-          {/* <Link
-            to="/pricing"
-            className="text-white hover:text-gray-300 font-semibold py-3 px-3 rounded-full transition-colors"
-          >
-            Pricing
-          </Link> */}
           <Link
-            to="/case-studies"
-            className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors"
+            to="success-stories"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors cursor-pointer"
           >
-            Case studies
+            Case Studies
           </Link>
           <Link
-            to="/team"
-            className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors"
+            to="team"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors cursor-pointer"
           >
             Team
           </Link>
           <Link
-            to="/faq"
-            className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors"
+            to="faq"
+            smooth={true}
+            duration={500}
+            className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors cursor-pointer"
           >
             FAQ
           </Link>
-          <Link
-            to="/buy"
+          <a
+            href="/buy"
             className="bg-white pr-4 text-black font-semibold py-3 px-3 rounded-full hover:bg-gray-200 transition-colors"
           >
             Call Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Navigation (Toggle + Buy) */}
@@ -109,12 +115,12 @@ export default function Navbar() {
               />
             </svg>
           </button>
-          <Link
-            to="/buy"
+          <a
+            href="/buy"
             className="bg-white text-black font-semibold py-3 px-4 rounded-full hover:bg-gray-200 transition-colors"
           >
             Call Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile Menu (Full-Screen Sidebar) */}
@@ -144,36 +150,37 @@ export default function Navbar() {
             {/* Sidebar Links */}
             <div className="flex flex-col space-y-6 mt-8">
               <Link
-                to="/services"
-                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
+                to="services"
+                smooth={true}
+                duration={800}
+                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 Services
               </Link>
-              {/* <Link
-                to="/pricing"
-                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
-                onClick={() => setIsOpen(false)}
-              >
-                Pricing
-              </Link> */}
               <Link
-                to="/case-studies"
-                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
+                to="success-stories"
+                smooth={true}
+                duration={800}
+                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
-                Case studies
+                Case Studies
               </Link>
               <Link
-                to="/team"
-                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
+                to="team"
+                smooth={true}
+                duration={800}
+                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 Team
               </Link>
               <Link
-                to="/faq"
-                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors"
+                to="faq"
+                smooth={true}
+                duration={800}
+                className="text-white hover:text-gray-300 text-lg font-semibold py-2 px-4 rounded-full transition-colors cursor-pointer"
                 onClick={() => setIsOpen(false)}
               >
                 FAQ
