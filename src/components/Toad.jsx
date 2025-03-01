@@ -26,14 +26,14 @@ export default function Toad() {
 
     const getEndValue = () => {
       const vh = window.innerHeight;
-      return window.innerWidth <= 768 ? `+=${vh * 2}` : `+=${vh * 3}`;
+      return window.innerWidth <= 768 ? `+=${vh / 3}` : `+=${vh / 2}`;
     };
 
     gsap.to(refs.current, {
       scrollTrigger: {
         trigger: container.current,
         scrub: true,
-        start: 'top 180%',
+        start: 'top 80%',
         end: getEndValue(),
       },
       opacity: 1,
