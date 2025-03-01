@@ -15,10 +15,10 @@ const Hero = () => {
 
       {/* Main Hero Content with background-one (on top of layers) */}
       <div className='relative z-10 background-one text-white overflow-hidden rounded-4xl'>
-        <div className='mx-auto px-4 pb-20 pt-45 flex flex-col h-full sm:pb-16 sm:pt-32 md:pb-20 md:pt-40 lg:pb-20 lg:pt-45 xl:pb-24 xl:pt-48'>
+        <div className='mx-auto px-2 pb-20 pt-45 flex flex-col h-full sm:pb-16 sm:pt-32 md:pb-20 md:pt-40 lg:pb-20 lg:pt-45 xl:pb-24 xl:pt-48'>
           {/* Heading */}
           <div className=''>
-            <h1 className='text-[2.6rem] px-[8%] sm:px-[15%] font-bold leading-12 tracking-tight text-white gradient-text sm:text-5xl sm:leading-tight md:text-6xl md:leading-snug lg:text-[6rem] lg:leading-[5.8rem] xl:text-[7.6rem] xl:leading-28'>
+            <h1 className='text-[2.6rem] px-2 sm:px-[15%] font-bold leading-12 tracking-tight text-white gradient-text sm:text-5xl sm:leading-tight md:text-6xl md:leading-snug lg:text-[6rem] lg:leading-[5.8rem] xl:text-[7.6rem] xl:leading-28'>
               <span className='whitespace-nowrap'>AI Services</span>
               <br />
               <span className='whitespace-nowrap'>for your Business</span>
@@ -28,13 +28,13 @@ const Hero = () => {
           </div>
 
           {/* Subtext */}
-          <p className='mt-6 text-md text-gray-300 max-w-4xl px-[8%] sm:px-[15%] sm:mt-4 sm:text-base md:mt-5 md:text-lg lg:mt-6 lg:text-lg xl:mt-6 xl:text-xl'>
+          <p className='mt-6 text-md text-gray-300 max-w-4xl px-2 sm:px-[15%] sm:mt-4 sm:text-base md:mt-5 md:text-lg lg:mt-6 lg:text-lg xl:mt-6 xl:text-xl'>
             We’ll pump your company with AI. As a leading AI automation agency
             with 99 years of experience, we deliver top results.
           </p>
 
           {/* Buttons and Links */}
-          <div className='px-[8%] sm:px-[15%] mt-10 flex flex-col items-start space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-6 sm:mt-8 md:mt-9 lg:mt-10 xl:mt-12'>
+          <div className='px-2 sm:px-[15%] mt-10 flex flex-col items-start space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4 md:space-x-5 lg:space-x-6 xl:space-x-6 sm:mt-8 md:mt-9 lg:mt-10 xl:mt-12'>
             {/* Button Container */}
             <div className='flex flex-row space-x-4 gap-2 sm:space-x-0'>
               <button className='bg-[#daeb20] text-black font-semibold py-3 px-8 rounded-lg cursor-pointer hover:scale-105 transition-colors w-full sm:w-auto sm:py-2 sm:px-6 md:py-3 md:px-7 lg:py-3 lg:px-8 xl:py-4 xl:px-9'>

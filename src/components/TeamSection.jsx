@@ -5,11 +5,11 @@ const TeamSection = () => {
 
   return (
     <section className='py-20'>
-      <div className='max-w-5xl mx-auto px-[2%]'>
+      <div className='max-w-5xl mx-auto px-[4%] sm:px-[2%]'>
         {/* Header Section */}
         <div className='mb-12'>
           <h2 className='text-3xl font-semibold tracking-tight'>Team</h2>
-          <p className='text-xl mt-4 max-w-md leading-7 font-light text-white/80'>
+          <p className='text-md sm:text-xl mt-4 max-w-md leading-7 font-light text-white/80'>
             Each member of our team has a strong tech knowledge, with our
             principal focus on the triumph of our customers' businesses
           </p>

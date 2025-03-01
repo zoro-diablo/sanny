@@ -2,7 +2,7 @@ import React from 'react';
 
 const CallToAction = () => {
   return (
-    <section className="bg-black text-white py-[4%] sm:py-[6%] md:py-[8%]">
+    <section className="bg-black text-white py-[20%] sm:py-[6%] md:py-[8%]">
       <div className="px-[12%] sm:px-[8%] md:px-[12%] lg:px-[16%] flex flex-col">
         {/* Heading and description */}
         <div className="mb-4 sm:mb-6 md:mb-8">
