@@ -254,12 +254,12 @@ const ScrollSection = () => {
   return (
     <div
       ref={sectionRef}
-      className="relative w-full px-[4%] sm:px-[13.5%] mx-auto my-[10%] sm:my-0 sm:h-[200vh]"
+      className="relative w-full px-[4%] sm:px-[13.5%] mx-auto my-[10%] sm:my-0 sm:h-[250vh]"
     >
       <div
         className="text-center mb-10 sm:mb-0 px-10 sm:px-4 
         sm:px-6 
-         md:left-0 md:top-0 md:h-[calc(50vh-80px)] md:w-1/2 md:text-white md:flex md:items-center md:justify-center md:p-6 md:z-10 md:sticky 
+         md:left-0 md:top-0 md:h-[calc(70vh-80px)] md:w-1/2 md:text-white md:flex md:items-center md:justify-center md:p-6 md:z-10 md:sticky 
         lg:p-8
         xl:p-10"
       >
@@ -269,7 +269,8 @@ const ScrollSection = () => {
             Powering the future of AI-driven enterprises
           </h1>
           <p className="text-white md:text-white/80 font-light">
-            Because we can solve the challenges that other companies can’t reach
+          AI isn’t just a tool. It’s a transformation.
+          Our expert-driven services empower you to optimize, scale and lead in the age of intelligence
           </p>
         </div>
       </div>

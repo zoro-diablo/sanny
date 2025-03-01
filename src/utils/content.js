@@ -131,7 +131,7 @@ export const services = [
     description:
       "We architect and optimize AI ecosystems for global enterprises, ensuring seamless automation, operational efficiency, and data-driven decision-making at scale. Our solutions enhance productivity, minimize risk, and drive measurable business impact.",
     imageSrc:
-      "https://images.unsplash.com/photo-1717501219905-2711c58ab655?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFpfGVufDB8fDB8fHwy",
+      "/Enterprise-Leaders-min.jpg",
     number: "1",
   },
   {
@@ -139,7 +139,7 @@ export const services = [
     description:
       "For companies looking to refine and scale their AI-driven products, we deliver advanced model optimization, seamless integrations, and performance enhancements that unlock new levels of efficiency and user engagement.",
     imageSrc:
-      "https://images.unsplash.com/photo-1696258686454-60082b2c33e2?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YWl8ZW58MHx8MHx8fDI%3D",
+      "/Scaling-AI-Products1-min.jpg",
     number: "2",
   },
   {
@@ -147,7 +147,7 @@ export const services = [
     description:
       "From concept to deployment, we help visionary leaders build transformative AI solutions. Our expertise in AI strategy, infrastructure, and execution ensures a competitive edge in a rapidly evolving landscape.",
     imageSrc:
-      "https://images.unsplash.com/photo-1711831521065-e546a5aca68e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGFpfGVufDB8fDB8fHwy",
+      "/AI-First-Innovators-min.jpg",
     number: "3",
   },
 ];

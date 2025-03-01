@@ -26,6 +26,8 @@ const Services = () => {
   const icon3Ref = useRef(null);
   const icon4Ref = useRef(null);
   const icon5Ref = useRef(null);
+  const icon6Ref = useRef(null);
+  const icon7Ref = useRef(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -143,8 +145,51 @@ const Services = () => {
       ease: 'none',
       duration: 5.2
     });
+    // Icon 6 (twitter.png)
+    gsap.set(icon6Ref.current, {
+      width: 70,
+      height: 70,
+      position: 'absolute',
+      top: '60%',
+      left: '90%',
+      zIndex: 0
+    });
+    gsap.to(icon6Ref.current, {
+      y: 400,
+      x: -100,
+      rotation: 540,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 60%',
+        end: 'bottom 60%',
+        scrub: 2.2
+      },
+      ease: 'none',
+      duration: 5.2
+    });
+    // Icon 7 (twitter.png)
+    gsap.set(icon7Ref.current, {
+      width: 70,
+      height: 70,
+      position: 'absolute',
+      top: '60%',
+      left: '30%',
+      zIndex: 0
+    });
+    gsap.to(icon7Ref.current, {
+      y: 350,
+      x: 150,
+      rotation: 450,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 40%',
+        end: 'bottom 50%',
+        scrub: 1.9
+      },
+      ease: 'none',
+      duration: 4.4
+    });
 
-    // Cleanup
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
@@ -153,11 +198,13 @@ const Services = () => {
   return (
     <section ref={sectionRef} className="text-white py-[8%] px-4 relative overflow-hidden">
       {/* Floating Icons */}
-      <img ref={icon1Ref} src="/acrobat.png" alt="Acrobat icon" className="absolute hidden sm:block" />
-      <img ref={icon2Ref} src="/adobe-photoshop.png" alt="Photoshop icon" className="absolute hidden sm:block" />
-      <img ref={icon3Ref} src="/itunes.png" alt="iTunes icon" className="absolute hidden sm:block" />
-      <img ref={icon4Ref} src="/after-effects.png" alt="After Effects icon" className="absolute hidden sm:block" />
-      <img ref={icon5Ref} src="/twitter.png" alt="Twitter icon" className="absolute hidden sm:block" />
+      <img ref={icon1Ref} src="/lang.png" alt="Acrobat icon" className="absolute hidden sm:block" />
+      <img ref={icon2Ref} src="/deep.png" alt="Photoshop icon" className="absolute hidden sm:block" />
+      <img ref={icon3Ref} src="/chatgpt.jpg" alt="iTunes icon" className="absolute hidden sm:block rounded-lg" />
+      <img ref={icon4Ref} src="/micro.png" alt="After Effects icon" className="absolute hidden sm:block rounded-lg" />
+      <img ref={icon5Ref} src="/mongodb.png" alt="mongo icon" className="absolute hidden sm:block" />
+      <img ref={icon6Ref} src="/milvus.png" alt="milv icon" className="absolute hidden sm:block" />
+      <img ref={icon7Ref} src="/langsmith.png" alt="lang icon" className="absolute hidden sm:block h-25 w-25" />
 
       <div className="max-w-5xl mx-auto relative z-10">
         <h2 className="text-3xl font-semibold mb-10 text-left ml-6">
