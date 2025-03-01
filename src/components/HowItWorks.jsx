@@ -100,12 +100,12 @@ const HowItWorks = () => {
             variants={circleVariants}
             initial='hidden'
             animate={controls}
-            className='w-32 sm:w-44 h-32 sm:h-44 rounded-full border 
+            className='w-32 sm:w-44 h-32 sm:h-44 rounded-full border-2 
                       flex items-center justify-center shadow-lg mx-auto self-center mb-8 sm:mb-16 relative'
           >
             {/* Circle 1 - Original diagonal movement */}
             <motion.div
-              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border absolute'
+              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border-2 absolute'
               animate={{
                 scale: [1, 1, 1],
                 rotate: [0, 180, 360],
@@ -122,7 +122,7 @@ const HowItWorks = () => {
 
             {/* Circle 2 - Horizontal movement */}
             <motion.div
-              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border absolute'
+              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border-2 absolute'
               animate={{
                 scale: [1, 1, 1],
                 rotate: [0, 90, 0],
@@ -139,7 +139,7 @@ const HowItWorks = () => {
 
             {/* Circle 3 - Vertical movement */}
             <motion.div
-              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border absolute'
+              className='w-12 sm:w-16 h-12 sm:h-16 rounded-full border-2 absolute'
               animate={{
                 scale: [1, 1, 1],
                 rotate: [0, -90, 0],
