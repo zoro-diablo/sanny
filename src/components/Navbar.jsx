@@ -39,7 +39,7 @@ export default function Navbar() {
       variants={navbarVariants}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
-      <div className="max-w-[1500px] mx-auto flex items-center justify-between h-16 px-[8%] sm:px-[15%] ">
+      <div className="max-w-[1500px] mx-auto flex items-center justify-between h-16 px-[4%] sm:px-[15%] ">
         {/* Logo Section */}
         <div className="flex items-center bg-[#343736]/64 backdrop-blur-md rounded-full py-3 px-4 ">
           <button
