@@ -28,7 +28,13 @@
 }
 
 .gradient-text {
-  background: linear-gradient(to right, #ffffff, #605f5f);
+  background: linear-gradient(to right, #ffffff, #d7d5d5);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; 
+}
+.gradient-text-two {
+  background: linear-gradient(to bottom, #bebebe, #605f5f);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent; 

@@ -68,7 +68,7 @@ export default function Navbar() {
             duration={500}
             className="text-white hover:text-gray-300 font-semibold py-3 px-2 rounded-full transition-colors cursor-pointer"
           >
-            Use Cases
+          Case Study
           </Link>
           <Link
             to="team"
