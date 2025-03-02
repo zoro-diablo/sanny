@@ -28,6 +28,9 @@ const Services = () => {
   const icon5Ref = useRef(null);
   const icon6Ref = useRef(null);
   const icon7Ref = useRef(null);
+  const icon8Ref = useRef(null);
+  const icon9Ref = useRef(null);
+  const icon10Ref = useRef(null);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -37,7 +40,7 @@ const Services = () => {
       height: 80,
       position: 'absolute',
       top: '7%',
-      left: '15%',
+      left: '11%',
       zIndex: 0
     });
     gsap.to(icon1Ref.current, {
@@ -60,7 +63,7 @@ const Services = () => {
       height: 75,
       position: 'absolute',
       top: '0%',
-      left: '25%',
+      left: '30%',
       zIndex: 0
     });
     gsap.to(icon2Ref.current, {
@@ -83,7 +86,7 @@ const Services = () => {
       height: 80,
       position: 'absolute',
       top: '9%',
-      left: '45%',
+      left: '50%',
       zIndex: 0
     });
     gsap.to(icon3Ref.current, {
@@ -173,10 +176,32 @@ const Services = () => {
       height: 70,
       position: 'absolute',
       top: '60%',
-      left: '30%',
+      left: '50%',
       zIndex: 0
     });
     gsap.to(icon7Ref.current, {
+      y: 350,
+      x: -10,
+      rotation: 250,
+      scrollTrigger: {
+        trigger: sectionRef.current,
+        start: 'top 40%',
+        end: 'bottom 20%',
+        scrub: 1.9
+      },
+      ease: 'none',
+      duration: 4.4
+    });
+    // Icon 8 (twitter.png)
+    gsap.set(icon8Ref.current, {
+      width: 70,
+      height: 70,
+      position: 'absolute',
+      top: '60%',
+      left: '20%',
+      zIndex: 0
+    });
+    gsap.to(icon8Ref.current, {
       y: 350,
       x: 150,
       rotation: 450,
@@ -190,25 +215,74 @@ const Services = () => {
       duration: 4.4
     });
 
+      // Icon 9 (twitter.png)
+      gsap.set(icon9Ref.current, {
+        width: 70,
+        height: 70,
+        position: 'absolute',
+        top: '60%',
+        left: '10%',
+        zIndex: 0
+      });
+      gsap.to(icon9Ref.current, {
+        y: 400,
+        x: -100,
+        rotation: 540,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 60%',
+          end: 'bottom 60%',
+          scrub: 2.2
+        },
+        ease: 'none',
+        duration: 5.2
+      });
+
+      // Icon 9 (twitter.png)
+      gsap.set(icon10Ref.current, {
+        width: 70,
+        height: 70,
+        position: 'absolute',
+        top: '60%',
+        left: '70%',
+        zIndex: 0
+      });
+      gsap.to(icon10Ref.current, {
+        y: 300,
+        x: -100,
+        rotation: 140,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: 'top 60%',
+          end: 'bottom 60%',
+          scrub: 1.2
+        },
+        ease: 'none',
+        duration: 5.2
+      });
+
     return () => {
       ScrollTrigger.getAll().forEach(t => t.kill());
     };
   }, []);
 
   return (
-    <section ref={sectionRef} className="text-white py-[8%] px-4 relative overflow-hidden">
+    <section ref={sectionRef} className="text-white py-[15%] px-4 relative overflow-hidden">
       {/* Floating Icons */}
       <img ref={icon1Ref} src="/lang.png" alt="Acrobat icon" className="absolute hidden sm:block" />
-      <img ref={icon2Ref} src="/deep.png" alt="Photoshop icon" className="absolute hidden sm:block" />
-      <img ref={icon3Ref} src="/chatgpt.jpg" alt="iTunes icon" className="absolute hidden sm:block rounded-lg" />
-      <img ref={icon4Ref} src="/micro.png" alt="After Effects icon" className="absolute hidden sm:block rounded-lg" />
-      <img ref={icon5Ref} src="/mongodb.png" alt="mongo icon" className="absolute hidden sm:block" />
+      <img ref={icon2Ref} src="/deep2.png" alt="Photoshop icon" className="absolute hidden sm:block" />
+      <img ref={icon3Ref} src="/chat.jpg" alt="iTunes icon" className="absolute hidden sm:block rounded-lg" />
+      <img ref={icon4Ref} src="/mongodb.png" alt="After Effects icon" className="absolute hidden sm:block rounded-lg" />
+      <img ref={icon5Ref} src="/langsmith.png" alt="mongo icon" className="absolute hidden sm:block" />
       <img ref={icon6Ref} src="/milvus.png" alt="milv icon" className="absolute hidden sm:block" />
-      <img ref={icon7Ref} src="/langsmith.png" alt="lang icon" className="absolute hidden sm:block h-25 w-25" />
+      <img ref={icon7Ref} src="/grok.png" alt="lang icon" className="absolute hidden sm:block h-25 w-25" />
+      <img ref={icon8Ref} src="/gemi.png" alt="lang icon" className="absolute hidden sm:block h-25 w-25" />
+      <img ref={icon9Ref} src="/micro.png" alt="lang icon" className="absolute hidden sm:block h-25 w-25 rounded-lg" />
+      <img ref={icon10Ref} src="/langchain.png" alt="lang icon" className="absolute hidden sm:block h-25 w-25 rounded-lg" />
 
       <div className="max-w-5xl mx-auto relative z-10">
         <h2 className="text-3xl font-semibold mb-10 text-left ml-6">
-          We are suitable for in place of Services
+          We are suitable
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((card, index) => (

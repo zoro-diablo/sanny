@@ -28,7 +28,8 @@ const SwipeCarousel = () => {
 
   // Handle slide navigation
   const paginate = (newDirection) => {
-    const newIndex = (currentIndex + newDirection + slides.length) % slides.length;
+    const newIndex =
+      (currentIndex + newDirection + slides.length) % slides.length;
     setCurrentIndex(newIndex);
     setPage([newIndex, newDirection]);
   };
@@ -114,13 +115,17 @@ const SwipeCarousel = () => {
                   </div>
                   <div className='w-full md:w-1/2 p-4 flex flex-col justify-center'>
                     <div className='bg-gray-200 p-4 rounded-lg mb-4 max-w-xs self-end'>
-                      <p className='text-gray-800'>{slides[currentIndex].message}</p>
+                      <p className='text-gray-800'>
+                        {slides[currentIndex].message}
+                      </p>
                       <p className='text-sm text-gray-600 mt-2'>
                         {slides[currentIndex].name}
                       </p>
                     </div>
                     <div className='bg-blue-100 p-4 rounded-lg max-w-xs self-start'>
-                      <p className='text-blue-800'>{slides[currentIndex].botReply}</p>
+                      <p className='text-blue-800'>
+                        {slides[currentIndex].botReply}
+                      </p>
                       <p className='text-sm text-blue-600 mt-2'>Sunny</p>
                     </div>
                   </div>
@@ -135,7 +140,9 @@ const SwipeCarousel = () => {
                     <p className='text-gray-800 font-semibold'>
                       {slides[currentIndex].name}
                     </p>
-                    <p className='text-gray-600 text-sm'>{slides[currentIndex].title}</p>
+                    <p className='text-gray-600 text-sm'>
+                      {slides[currentIndex].title}
+                    </p>
                   </div>
                 </div>
               </div>

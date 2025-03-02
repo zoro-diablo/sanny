@@ -73,14 +73,14 @@ export default function Toad() {
       <div ref={body} className={styles.body}>
         {splitWords(phrase)}
       </div>
-      <div className="flex flex-col gap-y-4 ">
+      {/* <div className="flex flex-col gap-y-4 ">
         <p className="text-white/50">Trusted by high-performing companies</p>
         <div className="flex gap-5 gap-x-10 flex-wrap">
           {svgs.map((svg) => (
             <div key={svg.id} dangerouslySetInnerHTML={{ __html: svg.content }} />
           ))}
         </div>
-      </div>
+      </div> */}
     </main>
   );
 }
